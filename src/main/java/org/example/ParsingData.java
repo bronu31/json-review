@@ -61,14 +61,10 @@ public class ParsingData {
         for(int i : prices){
             sum+=i;
         }
-        System.out.println(sum/prices.size());
-        System.out.println(((prices.get(prices.size()/2-1)+ prices.get(prices.size()/2))/2));
-        System.out.println((prices.get(prices.size()/2)));
-        System.out.println((prices.get(prices.size()/2-1)));
         if (prices.size()%2==0){
             return (sum/prices.size())-((prices.get(prices.size()/2-1)+ prices.get(prices.size()/2))/2);
         }
-        return (sum/prices.size())-(prices.get(prices.size()/2));
+        return (sum/prices.size())-(prices.get(prices.size()/2-1));
     }
 
     //calculating  flight time in minutes and in theory there is no flight path longer then 1 day
